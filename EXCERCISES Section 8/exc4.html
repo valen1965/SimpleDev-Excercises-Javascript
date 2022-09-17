@@ -1,0 +1,16 @@
+Exercise 4
+Create a button that takes what's inside the textbox, puts it in a div and adds the div to the page.
+
+solution.html
+<input type="text" id="todo-title" />
+<button onclick="displayTitle()">Display Title</button>
+<script>
+  function displayTitle() {
+    let textbox = document.getElementById('todo-title');
+    let title = textbox.value;
+
+    let div = document.createElement('div');
+    div.innerText = title;
+    document.body.appendChild(div);
+  }
+</script>
